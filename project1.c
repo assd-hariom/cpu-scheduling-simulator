@@ -1,3 +1,4 @@
+/* Used AI assistance for code refinement */
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -19,9 +20,9 @@ void input_processes(Process p[], int *n) {
 
     for (int i = 0; i < *n; i++) {
         p[i].pid = i + 1;
-        printf("Enter Arrival Time for P%d: ", i + 1);
+        printf("Enter Arrival Time for P %d: ", i + 1);
         scanf("%d", &p[i].arrival);
-        printf("Enter Burst Time for P%d: ", i + 1);
+        printf("Enter Burst Time for P %d: ", i + 1);
         scanf("%d", &p[i].burst);
 
         p[i].remaining = p[i].burst;
@@ -64,7 +65,7 @@ void reset_processes(Process p[], int n) {
 void fcfs(Process p[], int n) {
     int time = 0;
 
-    printf("\nGantt Chart: ");
+    printf("\n Gantt Chart: ");
 
     for (int i = 0; i < n; i++) {
         if (time < p[i].arrival)
